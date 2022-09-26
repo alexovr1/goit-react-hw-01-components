@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { List, Item, Status, Avatar, Name } from './FriendList.styled';
 
-export const FriendList = ({ array }) => {
+export const FriendList = ({ friends }) => {
     return <List>
-        {array.map(({ avatar, name, isOnline, id }) => (
+        {friends.map(({ avatar, name, isOnline, id }) => (
             <Item key={id}>
-                <Status data={isOnline}></Status>
+                <Status className={isOnline}></Status>
                 <Avatar src={avatar} alt="User avatar" width="48" />
                 <Name>{name}</Name>
             </Item>
         ))}
-    </List>
+    </List >
 }
