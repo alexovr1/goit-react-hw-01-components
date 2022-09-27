@@ -1,3 +1,4 @@
+import { getRandomHexColor } from 'components/Statistics/RandomColor';
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -6,7 +7,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-bottom: 15px;
-margin-top: 15px;
+margin-top: 30px;
 width:500px;
 border-radius: 8px;
 box-shadow: 3px 8px 14px 1px rgba(0,0,0,0.56);
@@ -26,7 +27,6 @@ font-size: 24px;
 font-weight: bold;
 padding-bottom: 15px;
 padding-top: 5px;
-
 `
 
 export const Item = styled.li`
@@ -38,7 +38,8 @@ align-content: center;
 align-items: center;
 padding-top: 20px;
 padding-bottom: 20px;
-background-color: red;
+background-color: ${getRandomHexColor};
+text-shadow: 1px 1px 1px black;
 `
 
 export const Label = styled.span`
